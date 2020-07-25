@@ -38,6 +38,7 @@ def api_json_view(request):
     page = 1
     sort_by = 'id'
 
+
     # API Request : /api?limit={parameter}
     get_limit = request.GET.get('limit', '')
 
@@ -46,6 +47,10 @@ def api_json_view(request):
 
     # API Request : /api?sort_by={parameter}
     get_sort_by = request.GET.get('sort_by', '')
+
+    # API Request : /api?order_by={parameter}
+    get_order_by = request.GET.get('order_by', '')
+
 
     if get_limit:
         if int(get_limit) >= 1 and int(get_limit) <= 50:
@@ -56,7 +61,6 @@ def api_json_view(request):
             start = (last * int(get_page)) - last
             last = last * int(get_page)
 
-
     if get_sort_by:
         if get_sort_by == 'title':
             sort_by = 'title'
@@ -64,6 +68,17 @@ def api_json_view(request):
             sort_by = '-year'
         elif get_sort_by == 'rating':
             sort_by = '-rating'
+
+    if get_order_by:
+        if get_order_by == 'asc':
+            if sort_by[0] != '-':
+                tmp_sort_by = []
+                tmp_sort_by.append('-')
+                tmp_sort_by.append(sort_by)
+                sort_by = ''.join(tmp_sort_by)
+            else:
+                sort_by = sort_by[1:]
+
 
 
 
