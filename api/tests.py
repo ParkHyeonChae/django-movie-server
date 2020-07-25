@@ -36,7 +36,7 @@ for data in json_data['data']['movies']:
 
 # TESTCASE 3 - 영화정보 DB 조회
 queryset = MovieList.objects.all()
-queryset = queryset.filter(genres__icontains='1')
+queryset = queryset.filter(genre__icontains='1')
 
 for model_instance in queryset:
     print(model_instance)
