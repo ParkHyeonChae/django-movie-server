@@ -1,6 +1,6 @@
 """api/test.py
 
-DB Field : title, year, rating, genres, summary
+DB Field : title, year, rating, genre, summary
 
 # sort_by : String (title, year, rating, peers, seeds, download_count, like_count, date_added)
 # order_by : String (desc, asc)

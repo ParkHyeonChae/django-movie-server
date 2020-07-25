@@ -94,7 +94,7 @@ $ python manage.py runserver
 | title     | O        | *String*  | -       | Enter the title of the movie.        |
 | year      | O        | *Integer* | -       | Enter the release year of the movie. |
 | rating    | O        | *Float*   | -       | Enter the movie's rating.            |
-| genres    | O        | *String*  | -       | Enter the genre of the movie.        |
+| genre     | O        | *String*  | -       | Enter the genre of the movie.        |
 | summary   | O        | *String*  | -       | Enter a description for the movie.   |
 
 ###### 
@@ -103,5 +103,5 @@ $ python manage.py runserver
 
 | METHOD | URL                                                          | Description                        |
 | ------ | ------------------------------------------------------------ | ---------------------------------- |
-| POST   | http://127.0.0.1:8000/api/?title=test&year=2015&rating=9.1&genres=Action&summary=test | Save to DB as requested parametert |
+| POST   | http://127.0.0.1:8000/api/?title=test&year=2015&rating=9.1&genre=Action&summary=test | Save to DB as requested parametert |
 

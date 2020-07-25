@@ -98,12 +98,12 @@ class MovieListApi(View):
         post_title = request.GET.get("title")
         post_year = request.GET.get('year')
         post_rating = request.GET.get('rating')
-        post_genres = request.GET.get('genres')
+        post_genre = request.GET.get('genre')
         post_summary = request.GET.get('summary')
 
         # 각 Parameter는 필수요소이므로 확인 후 DB에 저장
-        if post_title and post_year and post_rating and post_genres and post_summary:
-            MovieList.objects.create(title=post_title, year=post_year, rating=post_rating, genre=post_genres, summary=post_summary)
+        if post_title and post_year and post_rating and post_genre and post_summary:
+            MovieList.objects.create(title=post_title, year=post_year, rating=post_rating, genre=post_genre, summary=post_summary)
 
             return HttpResponse("Query was successful")
         else:
