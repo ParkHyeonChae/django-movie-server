@@ -7,5 +7,5 @@ app_name = 'api'
 
 
 urlpatterns = [
-    path('', views.all_list_view, name='all_list'),
+    path('', views.api_json_view, name='api_json_view'),
 ]
