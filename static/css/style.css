@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(219, 224, 236);
+}
+
+.cardCenter {
+    position: absolute;
+    top: 30%;
+}
+
+button {
+    background: #014ad1f2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    width: 165px;
+    height: 40px;
+    font-size: 1.1em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+  }
+  
+  button:hover {
+    background: #002c7cf2;
+  }
+  
+  button:focus {
+    outline : none;
+  }
+
+form {
+    float : right;
+    margin-left: 10px;
+}
+
+p {
+    color:rgb(139, 139, 139);
+    margin-top: 10px;
+    margin-bottom: -15px;
+}

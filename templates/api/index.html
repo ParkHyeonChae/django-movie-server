@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <meta charset='utf-8'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/css/mdb.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="cardCenter">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center justify-content-center">
+                            <h1 class="font-weight-bold">Django API Server</h1>
+                            <br>
+                            <button
+                                data-toggle="tooltip"
+                                data-placement="bottom"
+                                title="GET API를 요청합니다. 파라미터를 바꾸어서 테스트 해보세요! Postman 사용 또는 Chrome JsonView 설치를 추천드립니다."
+                                onclick="location.href='/api/?sort_by=title&limit=10&page=10'">GET
+                            </button>
+                            <form action="/api/?title=MovieTitle&year=2020&rating=9.9&genres=Action&summary=MovieSummary" method="POST">
+                                {% csrf_token %}
+                                <button
+                                    data-toggle="tooltip"
+                                    data-placement="bottom"
+                                    title="POST API를 요청합니다. 테스트용이므로 Postman을 사용해서 POST를 요청해보세요!">POST
+                                </button>
+                            </form>
+                            <p>API문서는 Github ReadMe를 참고해주세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
