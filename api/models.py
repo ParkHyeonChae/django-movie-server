@@ -32,7 +32,7 @@ class MovieList(models.Model):
 #             title=data['title'],
 #             year=data['year'],
 #             rating=data['rating'],
-#             genres=data['genres'],
+#             genre=data['genres'],
 #             summary=data['summary']
 #         )
 
