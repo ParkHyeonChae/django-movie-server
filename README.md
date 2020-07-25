@@ -1,5 +1,12 @@
 # Django-API-Server
 
+## Technology
+- Framework : Django 3.0.2
+- Language : Python 3.7.4
+- Database : SQLite3
+- OS : Window10
+- IDE : VsCode
+
 ## Execution
 
 ### Repogitory Clone
