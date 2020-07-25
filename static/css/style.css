@@ -35,8 +35,20 @@ form {
     margin-left: 10px;
 }
 
-p {
+span {
     color:rgb(139, 139, 139);
+}
+
+a {
+    color:rgb(94, 93, 93);
+    font-weight: 500;
+}
+
+  a:hover {
+    color:rgb(63, 63, 63);
+  }
+
+.description {
     margin-top: 10px;
-    margin-bottom: -15px;
+    margin-bottom: -10px;
 }
