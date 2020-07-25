@@ -10,15 +10,15 @@ class MovieListAdmin(admin.ModelAdmin):
         'title',
         'year',
         'rating',
-        'genres',
+        'genre',
         'summary',
-        
+
     )
     search_fields = (
         'title',
         'year',
         'rating',
-        'genres',
+        'genre',
     )
 
 

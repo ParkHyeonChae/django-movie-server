@@ -23,13 +23,13 @@ for data in json_data['data']['movies']:
         '제목 : ', data['title'], type(data['title']),
         '\n년도 : ', data['year'], type(data['year']),
         '\n평점 : ', data['rating'], type(data['rating']),
-        '\n장르 : ', data['genres'], type(data['genres']),
+        '\n장르 : ', data['genre'], type(data['genre']),
         '\n개요 : ', data['summary'], type(data['summary']), '\n\n'
     )
 
 
 # TESTCASE 2 - 영화정보 DB 입력
-# MovieList.objects.create(title="test", year=2020, rating=1.1, genres=['1','2'], summary="test")
+# MovieList.objects.create(title="test", year=2020, rating=1.1, genre=['1','2'], summary="test")
 # print(MovieList.objects.all())
 
 
